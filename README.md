@@ -1,25 +1,7 @@
-# Bow-Geometry
-This repository contains the complete, reproducible numerical implementation used to generate all figures and results in the manuscript:"Geometric Signatures of Ancient Bows: A Unified Mechanical
-Framework".
-The code implements a physics-based model of three bow architectures — self-bow, composite recurve, and asymmetric Japanese Yumi — including bow geometry, force–draw relations, energy storage, efficiency, arrow launch velocity, and sensitivity analyses.
+This repository provides the complete numerical implementation supporting the results and figures reported in the accompanying manuscript. Its primary purpose is to ensure transparent, verifiable, and long-term reproducibility of the published analysis.
 
-All figures in the manuscript can be regenerated from this repository without modification.
-bow-mechanics/
-├── src/
-│   ├── main.py          # Entry point: reproduces all figures
-│   ├── parameters.py    # Physical and geometric parameters (Table 1)
-│   ├── geometry.py      # Bow–string kinematics
-│   ├── forces.py        # Force–draw laws
-│   ├── simulations.py  # Solvers, Yumi coupling, Monte Carlo analysis
-│   └── utils.py         # Energy, efficiency, velocity utilities
-│
-├── figures/
-│   ├── Figure-composite.png
-│   └── sensitivity.png
-│
-├── requirements.txt
-├── CITATION.cff
-├── LICENSE
-└── README.md
+The code implements a physics-based model of bow mechanics, capturing the coupled effects of limb geometry, rotational stiffness, string kinematics, and energy transfer for three distinct bow architectures: a self-bow, a composite recurve bow, and an asymmetric Japanese Yumi. All force–draw relations, energy calculations, efficiency measures, and sensitivity analyses reported in the manuscript are generated directly from this implementation.
 
-If you use this code, please cite the associated manuscript and the archived software release.
+The repository is intentionally structured so that all figures can be reproduced with a single command, without the need for external data files or manual parameter tuning. Numerical solvers, integration schemes, and random sampling procedures are fully specified and deterministic, enabling exact replication of results across systems.
+
+This code is provided primarily for reviewers and researchers interested in verifying the analysis, reproducing the figures, or extending the model to related historical or biomechanical bow configurations. Familiarity with Python is sufficient to run the simulations; detailed knowledge of the internal implementation is not required for reproduction.
